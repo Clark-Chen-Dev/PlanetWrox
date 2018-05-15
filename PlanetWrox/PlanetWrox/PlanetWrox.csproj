@@ -66,6 +66,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demos\CssDemo.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -80,6 +81,7 @@
     <Content Include="Demos\CodeBehind.aspx" />
     <Content Include="Demos\CodeInline.aspx" />
     <Content Include="Demos\TableDemo.aspx" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -104,6 +106,13 @@
     </Compile>
     <Compile Include="Demos\CodeInline.aspx.designer.cs">
       <DependentUpon>CodeInline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\CssDemo.aspx.cs">
+      <DependentUpon>CssDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\CssDemo.aspx.designer.cs">
+      <DependentUpon>CssDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\TableDemo.aspx.cs">
       <DependentUpon>TableDemo.aspx</DependentUpon>

@@ -6,18 +6,21 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            color: #FF0000;
-        }
-    </style>
+    <link href="Styles/Styles.css" rel="stylesheet" />
+    <script src="Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Hi there visitor and welcome to Planet Wrox</h1>
-            <p>We&#39;re glad you&#39;re <span class="auto-style1">paying a visit</span> to <a href="http://www.PlanetWrox.com">www.PlanetWrox.com</a>, the coolest music community site on the Internet.</p>
-            <p>Feel free to have a look around; there are lots of interesting <strong>reviews and concert pictures</strong> to be found here.</p>
+        <div id="PageWrapper">
+            <header>Header Goes Here</header>
+            <nav>Menu Goes Here</nav>
+            <section id="MainContent">
+                <h1>Hi there visitor and welcome to Planet Wrox</h1>
+                <p class="Introduction">We&#39;re glad you&#39;re paying a visit to <a href="http://www.PlanetWrox.com">www.PlanetWrox.com</a>, the coolest music community site on the Internet.</p>
+                <p class="Introduction">Feel free to have a <a href="Default.aspx">look around</a>; there are lots of interesting <strong>reviews and concert pictures</strong> to be found here.</p>
+            </section>
+            <aside id="Sidebar">Sidebar Goes Here</aside>
+            <footer>Footer Goes Here</footer>
         </div>
     </form>
 </body>
