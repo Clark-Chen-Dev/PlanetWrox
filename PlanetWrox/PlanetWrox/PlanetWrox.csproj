@@ -66,7 +66,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demos\Containers.aspx" />
+    <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
+    <Content Include="Demos\ListControls.aspx" />
+    <Content Include="Demos\State.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
@@ -107,12 +111,40 @@
     <Compile Include="Demos\CodeInline.aspx.designer.cs">
       <DependentUpon>CodeInline.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\Containers.aspx.cs">
+      <DependentUpon>Containers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\Containers.aspx.designer.cs">
+      <DependentUpon>Containers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\ControlsDemo.aspx.cs">
+      <DependentUpon>ControlsDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\ControlsDemo.aspx.designer.cs">
+      <DependentUpon>ControlsDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\CssDemo.aspx.cs">
       <DependentUpon>CssDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Demos\CssDemo.aspx.designer.cs">
       <DependentUpon>CssDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\ListControls.aspx.cs">
+      <DependentUpon>ListControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\ListControls.aspx.designer.cs">
+      <DependentUpon>ListControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\State.aspx.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\State.aspx.designer.cs">
+      <DependentUpon>State.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\TableDemo.aspx.cs">
       <DependentUpon>TableDemo.aspx</DependentUpon>
