@@ -11,7 +11,33 @@ namespace PlanetWrox.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                string selectedItem = Page.Theme;
+                HttpCookie preferredTheme = Request.Cookies.Get("PreferredTheme");
 
+                if (preferredTheme != null)
+                {
+                    selectedItem = preferredTheme.Value;
+                } // end if
+                if (!string.IsNullOrEmpty(selectedItem))
+                {
+                    ListItem item = ThemeList.Items.FindByValue(selectedItem);
+                    if (item != null)
+                    {
+                        item.Selected = true;
+                    } // end if
+                } // end if
+            } // end if
+        }
+
+        protected void ThemeList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HttpCookie preferredTheme = new HttpCookie("PreferredTheme");
+            preferredTheme.Expires = DateTime.Now.AddMonths(3);
+            preferredTheme.Value = ThemeList.SelectedValue;
+            Response.Cookies.Add(preferredTheme);
+            Response.Redirect(Request.Url.ToString());
         }
     }
 }

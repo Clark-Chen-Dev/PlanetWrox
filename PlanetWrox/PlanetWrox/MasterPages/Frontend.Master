@@ -4,16 +4,31 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script src="/Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div id="PageWrapper">
+            <header><a href="/"></a></header>
+            <nav>Menu Goes Here</nav>
+            <section id="MainContent">
+                <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+                    This is default text that shows up in content pages that don't explicitly override it.
+                </asp:ContentPlaceHolder>
+            </section>
+            <aside id="Sidebar">
+                Select a theme
+                <br />
+                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+                    <asp:ListItem>Monochrome</asp:ListItem>
+                    <asp:ListItem>DarkGrey</asp:ListItem>
+                </asp:DropDownList>
+            </aside>
+            <footer>Footer Goes Here</footer>
         </div>
     </form>
 </body>

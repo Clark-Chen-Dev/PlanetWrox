@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PlanetWrox
 {
-    public partial class Default : BasePage
+    public partial class Login : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
