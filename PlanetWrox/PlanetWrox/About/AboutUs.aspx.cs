@@ -11,7 +11,10 @@ namespace PlanetWrox.About
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!Page.IsPostBack)
+            {
+                Banner2.NavigateUrl = "http://imar.spaanjaars.com";
+            }
         }
     }
 }

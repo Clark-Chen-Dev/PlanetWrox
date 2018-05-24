@@ -18,8 +18,8 @@
                 <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
                 <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="false">
                     <LevelStyles>
-                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems"/>
-                    </LevelStyles> 
+                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+                    </LevelStyles>
                 </asp:TreeView>
                 <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
             </nav>
@@ -38,6 +38,10 @@
                     <asp:ListItem>Monochrome</asp:ListItem>
                     <asp:ListItem>DarkGrey</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
+                <Wrox:Banner runat="server" id="Banner1" DisplayDirection ="Vertical"/>
+                <br />
             </aside>
             <footer>Footer Goes Here</footer>
         </div>

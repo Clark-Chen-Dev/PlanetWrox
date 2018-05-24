@@ -78,6 +78,7 @@
     <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
     <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
     <Content Include="App_Themes\Monochrome\Monochrome.css" />
+    <Content Include="Controls\Banner.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
@@ -89,6 +90,8 @@
     <Content Include="Demos\State.aspx" />
     <Content Include="Demos\Target.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Banner120x240.gif" />
+    <Content Include="Images\Banner486x60.gif" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="App_Themes\Monochrome\Button.skin" />
@@ -133,11 +136,19 @@
     <Compile Include="About\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Common\Calculator.cs" />
-    <Compile Include="Common\BasePage.cs">
+    <Compile Include="Code\Calculator.cs" />
+    <Compile Include="Code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Common\RouteConfig.cs" />
+    <Compile Include="Code\Direction.cs" />
+    <Compile Include="Code\RouteConfig.cs" />
+    <Compile Include="Controls\Banner.ascx.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Banner.ascx.designer.cs">
+      <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -270,7 +281,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
     <Folder Include="Styles\" />
   </ItemGroup>
   <PropertyGroup>
