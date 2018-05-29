@@ -210,3 +210,7 @@ a.level2 {
 img {
     border: 0;
 }
+
+.ErrorMessage {
+    color: red;
+}

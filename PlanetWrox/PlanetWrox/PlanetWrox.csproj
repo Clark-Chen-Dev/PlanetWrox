@@ -79,6 +79,7 @@
     <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
     <Content Include="App_Themes\Monochrome\Monochrome.css" />
     <Content Include="Controls\Banner.ascx" />
+    <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
@@ -148,6 +149,13 @@
     </Compile>
     <Compile Include="Controls\Banner.ascx.designer.cs">
       <DependentUpon>Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ContactForm.ascx.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactForm.ascx.designer.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
