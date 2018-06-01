@@ -80,11 +80,13 @@
     <Content Include="App_Themes\Monochrome\Monochrome.css" />
     <Content Include="Controls\Banner.ascx" />
     <Content Include="Controls\ContactForm.ascx" />
+    <Content Include="Data\ContactForm.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
+    <Content Include="Demos\Email.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
     <Content Include="Demos\Source.aspx" />
@@ -205,6 +207,13 @@
     </Compile>
     <Compile Include="Demos\CssDemo.aspx.designer.cs">
       <DependentUpon>CssDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\Email.aspx.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\Email.aspx.designer.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\ListControls.aspx.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
