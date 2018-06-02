@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +52,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,8 +78,10 @@
     <Content Include="About\Default.aspx" />
     <Content Include="App_Themes\DarkGrey\DarkGrey.css" />
     <Content Include="App_Themes\DarkGrey\Images\Header.jpg" />
+    <Content Include="App_Themes\DarkGrey\Images\PleaseWait.gif" />
     <Content Include="App_Themes\Monochrome\Images\Header.jpg" />
     <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
+    <Content Include="App_Themes\Monochrome\Images\PleaseWait.gif" />
     <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
     <Content Include="App_Themes\Monochrome\Monochrome.css" />
     <Content Include="Controls\Banner.ascx" />
@@ -92,12 +98,15 @@
     <Content Include="Demos\Source.aspx" />
     <Content Include="Demos\State.aspx" />
     <Content Include="Demos\Target.aspx" />
+    <Content Include="Demos\UpdatePanel.aspx" />
+    <Content Include="Demos\WebServices.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Banner120x240.gif" />
     <Content Include="Images\Banner486x60.gif" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="App_Themes\Monochrome\Button.skin" />
+    <Content Include="WebServices\NameService.svc" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -257,6 +266,20 @@
     <Compile Include="Demos\Target.aspx.designer.cs">
       <DependentUpon>Target.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\UpdatePanel.aspx.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\UpdatePanel.aspx.designer.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\WebServices.aspx.cs">
+      <DependentUpon>WebServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\WebServices.aspx.designer.cs">
+      <DependentUpon>WebServices.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -295,6 +318,9 @@
     </Compile>
     <Compile Include="Reviews\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\NameService.svc.cs">
+      <DependentUpon>NameService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

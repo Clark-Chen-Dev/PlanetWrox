@@ -42,6 +42,7 @@ namespace PlanetWrox.Controls
 
                 Message.Visible = true;
                 FormTable.Visible = false;
+                System.Threading.Thread.Sleep(5000);
             } // end if
         }
 
