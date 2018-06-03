@@ -52,6 +52,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
@@ -88,11 +91,13 @@
     <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Data\ContactForm.txt" />
     <Content Include="Default.aspx" />
+    <Content Include="Demos\BasicSelectors.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\Email.aspx" />
+    <Content Include="Demos\jQuery.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
     <Content Include="Demos\Source.aspx" />
@@ -103,11 +108,31 @@
     <Content Include="Global.asax" />
     <Content Include="Images\Banner120x240.gif" />
     <Content Include="Images\Banner486x60.gif" />
+    <Content Include="jQueryDemos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="App_Themes\Monochrome\Button.skin" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="WebServices\NameService.svc" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -175,6 +200,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\BasicSelectors.aspx.cs">
+      <DependentUpon>BasicSelectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\BasicSelectors.aspx.designer.cs">
+      <DependentUpon>BasicSelectors.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\CalculatorDemo.aspx.cs">
       <DependentUpon>CalculatorDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -223,6 +255,13 @@
     </Compile>
     <Compile Include="Demos\Email.aspx.designer.cs">
       <DependentUpon>Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\jQuery.aspx.cs">
+      <DependentUpon>jQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\jQuery.aspx.designer.cs">
+      <DependentUpon>jQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\ListControls.aspx.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
@@ -282,6 +321,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="jQueryDemos.aspx.cs">
+      <DependentUpon>jQueryDemos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jQueryDemos.aspx.designer.cs">
+      <DependentUpon>jQueryDemos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

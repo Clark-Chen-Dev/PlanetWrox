@@ -41,6 +41,7 @@ namespace PlanetWrox.Controls
                 mySmtpClient.Send(myMessage);
 
                 Message.Visible = true;
+                MessageSentPara.Visible = true;
                 FormTable.Visible = false;
                 System.Threading.Thread.Sleep(5000);
             } // end if
