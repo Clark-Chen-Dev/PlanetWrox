@@ -14,7 +14,7 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
-                <asp:ScriptReference Path="~/Scripts/jquery-3.3.1.min.js" />
+                <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />     
             </Scripts>
         </asp:ScriptManager>
