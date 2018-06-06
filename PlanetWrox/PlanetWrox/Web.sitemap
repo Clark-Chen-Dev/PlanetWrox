@@ -6,6 +6,10 @@
       <siteMapNode url="~/Reviews/AllByGenre" title="By Genre" description="All Reviews Grouped by Genre" />
       <siteMapNode url="~/Reviews/All" title="All Reviews" description="All Reviews" />
     </siteMapNode>
+    <siteMapNode url="~/PhotoAlbums/" title="Gig Pics" description="All Gig Pics">
+      <siteMapNode url="~/PhotoAlbums/Default" title="Gig Pics" description="All Gig Pics" />
+      <siteMapNode url="~/NewPhotoAlbum" title="New Album" description="Create a new Photo Album with Gig Pics" />
+    </siteMapNode>
     <siteMapNode url="~/About/Default" title="About" description="About this Site">
       <siteMapNode url="~/About/Contact" title="Contact Us" description="Contact Us" />
       <siteMapNode url="~/About/AboutUs" title="About Us" description="About Us" />
