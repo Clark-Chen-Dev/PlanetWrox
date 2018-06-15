@@ -7,7 +7,7 @@
     </asp:DropDownList>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2">
         <Columns>
-            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReview.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
+            <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="AddEditReviewHandCoded.aspx?Id={0}" DataTextField="Title" HeaderText="Title" />
             <asp:TemplateField HeaderText="Authorized" SortExpression="Authorized">
                 <ItemTemplate>
                     <asp:Label ID="AuthorizedLabel" runat="server" Text='<%# GetBooleanText(Eval("Authorized")) %>'></asp:Label>
@@ -17,7 +17,7 @@
             <asp:CommandField HeaderText="Delete" ShowDeleteButton="True" />
         </Columns>
     </asp:GridView>
-    <a href="AddEditReview.aspx">Insert New Review</a>
+    <a href="AddEditReviewHandCoded.aspx">Insert New Review</a>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:PlanetWroxConnectionString1 %>" 
         SelectCommand="SELECT [Id], [Title], [Authorized], [CreateDateTime] FROM [Review] WHERE ([GenreId] = @GenreId)" 
         DeleteCommand="DELETE FROM [Review] WHERE [Id] = @Id" 

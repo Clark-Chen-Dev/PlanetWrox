@@ -19,8 +19,8 @@ namespace PlanetWrox.Reviews
                                        orderby review.CreateDateTime descending
                                        select review;
 
-                GridView1.DataSource = authorizeReviews.ToList();
-                GridView1.DataBind();
+                Repeater1.DataSource = authorizeReviews.ToList();
+                Repeater1.DataBind();
             } // end using
         }
     }

@@ -89,6 +89,9 @@
     <Content Include="App_Themes\DarkGrey\DarkGrey.css" />
     <Content Include="App_Themes\DarkGrey\Images\Header.jpg" />
     <Content Include="App_Themes\DarkGrey\Images\PleaseWait.gif" />
+    <Content Include="App_Themes\Management\Images\SortAscending.png" />
+    <Content Include="App_Themes\Management\Images\SortDescending.png" />
+    <Content Include="App_Themes\Management\Management.css" />
     <Content Include="App_Themes\Monochrome\Images\Header.jpg" />
     <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
     <Content Include="App_Themes\Monochrome\Images\PleaseWait.gif" />
@@ -114,6 +117,7 @@
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\Email.aspx" />
+    <Content Include="Demos\Events.aspx" />
     <Content Include="Demos\jQuery.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
@@ -128,6 +132,7 @@
     <Content Include="jQueryDemos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Management\AddEditReview.aspx" />
+    <Content Include="Management\AddEditReviewHandCoded.aspx" />
     <Content Include="Management\Default.aspx" />
     <Content Include="Management\Genres.aspx" />
     <Content Include="Management\Reviews.aspx" />
@@ -143,9 +148,11 @@
     <Content Include="Code\PlanetWrox.edmx.diagram">
       <DependentUpon>PlanetWrox.edmx</DependentUpon>
     </Content>
+    <Content Include="App_Themes\Management\GridView.skin" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="NewPhotoAlbum.aspx" />
     <Content Include="PhotoAlbums\Default.aspx" />
+    <Content Include="Reviews\ViewDetails.aspx" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -316,6 +323,13 @@
     <Compile Include="Demos\Email.aspx.designer.cs">
       <DependentUpon>Email.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\jQuery.aspx.cs">
       <DependentUpon>jQuery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -403,6 +417,13 @@
     <Compile Include="Management\AddEditReview.aspx.designer.cs">
       <DependentUpon>AddEditReview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Management\AddEditReviewHandCoded.aspx.cs">
+      <DependentUpon>AddEditReviewHandCoded.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management\AddEditReviewHandCoded.aspx.designer.cs">
+      <DependentUpon>AddEditReviewHandCoded.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Management\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -480,6 +501,13 @@
     </Compile>
     <Compile Include="Reviews\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reviews\ViewDetails.aspx.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reviews\ViewDetails.aspx.designer.cs">
+      <DependentUpon>ViewDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebServices\NameService.svc.cs">
       <DependentUpon>NameService.svc</DependentUpon>
