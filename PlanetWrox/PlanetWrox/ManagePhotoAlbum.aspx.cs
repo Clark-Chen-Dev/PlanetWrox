@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.ModelBinding;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -74,6 +75,17 @@ namespace PlanetWrox
                 myEntites.Pictures.Remove(picture);
                 myEntites.SaveChanges();
             } // end using
+        }
+
+        protected void ListView1_ItemCreated(object sender, ListViewItemEventArgs e)
+        {
+            switch (e.Item.ItemType)
+            {
+                case ListViewItemType.DataItem:
+                    Button deleteButton = (Button)e.Item.FindControl("DeleteButton");
+                    deleteButton.Visible = Roles.IsUserInRole("Managers");
+                    break;
+            }
         }
     }
 }

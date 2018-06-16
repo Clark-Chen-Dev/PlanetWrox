@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cpMainContent" runat="server">
     <asp:ListView ID="ListView1" runat="server" DataKeyNames="Id" InsertItemPosition="LastItem" 
-        SelectMethod="ListView1_GetData" InsertMethod="ListView1_InsertItem" DeleteMethod="ListView1_DeleteItem" ItemType="PlanetWrox.Code.Picture">
+        SelectMethod="ListView1_GetData" InsertMethod="ListView1_InsertItem" DeleteMethod="ListView1_DeleteItem" ItemType="PlanetWrox.Code.Picture" OnItemCreated="ListView1_ItemCreated">
         <InsertItemTemplate>
             <li>Description:
                 <asp:RequiredFieldValidator ID="reqDesc" ControlToValidate="Description" runat="server" ErrorMessage="Enter a description." />

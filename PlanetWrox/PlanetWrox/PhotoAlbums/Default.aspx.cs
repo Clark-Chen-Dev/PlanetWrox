@@ -37,5 +37,18 @@ namespace PlanetWrox.PhotoAlbums
         {
             ListView1.DataBind();
         }
+
+        protected void ListView1_DataBound(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(PhotoAlbumList.SelectedValue))
+            {
+                EditLink.NavigateUrl = string.Format("~/ManagePhotoAlbum.aspx?PhotoAlbumId={0}", PhotoAlbumList.SelectedValue);
+                EditLink.Visible = true;
+            }
+            else
+            {
+                EditLink.Visible = false;
+            }
+        }
     }
 }

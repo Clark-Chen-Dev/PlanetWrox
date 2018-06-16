@@ -4,55 +4,73 @@
 
 <html>
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-    <script src="/Scripts/modernizr-2.8.3.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+  <script src="/Scripts/modernizr-2.8.3.js"></script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
-            <Scripts>
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />     
-            </Scripts>
-        </asp:ScriptManager>
-        <div id="PageWrapper">
-            <header><a href="/"></a></header>
-            <nav>
-                <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
-                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="false">
-                    <LevelStyles>
-                        <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
-                    </LevelStyles>
-                </asp:TreeView>
-                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
-            </nav>
-            <section id="MainContent">
-                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
-                <br />
-                <br />
-                <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
-                    This is default text that shows up in content pages that don't explicitly override it.
-                </asp:ContentPlaceHolder>
-            </section>
-            <aside id="Sidebar">
-                Select a theme
-                <br />
-                <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
-                    <asp:ListItem>Monochrome</asp:ListItem>
-                    <asp:ListItem>DarkGrey</asp:ListItem>
-                </asp:DropDownList>
-                <br />
-                <br />
-                <Wrox:Banner runat="server" ID="Banner1" DisplayDirection="Vertical" />
-                <br />
-            </aside>
-            <footer>Footer Goes Here</footer>
-        </div>
-        <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
+  <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+      <Scripts>
+        <asp:ScriptReference Name="jquery" />
+        <asp:ScriptReference Path="~/Scripts/WebForms/WebUIValidation.js" />
+      </Scripts>
+    </asp:ScriptManager>
+    <div id="PageWrapper">
+      <header><a href="/"></a></header>
+      <nav>
+        <asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"></asp:Menu>
+        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowExpandCollapse="false">
+          <LevelStyles>
+            <asp:TreeNodeStyle CssClass="FirstLevelMenuItems" />
+          </LevelStyles>
+        </asp:TreeView>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+      </nav>
+      <section id="MainContent">
+        <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+          This is default text that shows up in content pages that don't explicitly override it.
         </asp:ContentPlaceHolder>
-    </form>
+      </section>
+      <aside id="Sidebar">
+        Select a theme
+                <br />
+        <asp:DropDownList ID="ThemeList" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ThemeList_SelectedIndexChanged">
+          <asp:ListItem>Monochrome</asp:ListItem>
+          <asp:ListItem>DarkGrey</asp:ListItem>
+        </asp:DropDownList>
+        <br />
+        <br />
+        <Wrox:Banner runat="server" ID="Banner1" DisplayDirection="Vertical" />
+        <br />
+      </aside>
+      <footer>
+        <asp:LoginName ID="LoginName1" runat="server" FormatString="Logged in as {0}" />
+        <asp:LoginView ID="LoginView1" runat="server">
+          <LoggedInTemplate>
+            (<asp:LoginStatus ID="LoginStatus1" runat="server" />
+            )
+          </LoggedInTemplate>
+          <RoleGroups>
+            <asp:RoleGroup Roles="Managers">
+              <ContentTemplate>
+                (<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Management/Default.aspx">Manage Site</asp:HyperLink>
+                or
+                <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                )
+              </ContentTemplate>
+            </asp:RoleGroup>
+          </RoleGroups>
+        </asp:LoginView>
+      </footer>
+    </div>
+    <asp:ContentPlaceHolder ID="cpClientScript" runat="server">
+    </asp:ContentPlaceHolder>
+  </form>
 </body>
 </html>

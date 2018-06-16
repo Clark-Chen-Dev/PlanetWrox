@@ -74,6 +74,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -110,6 +113,7 @@
     <Content Include="Controls\Banner.ascx" />
     <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Data\ContactForm.txt" />
+    <Content Include="Data\SignUpConfirmation.txt" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\BasicSelectors.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
@@ -150,6 +154,7 @@
     </Content>
     <Content Include="App_Themes\Management\GridView.skin" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="MyProfile.aspx" />
     <Content Include="NewPhotoAlbum.aspx" />
     <Content Include="PhotoAlbums\Default.aspx" />
     <Content Include="Reviews\ViewDetails.aspx" />
@@ -167,6 +172,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SignUp.aspx" />
     <Content Include="WebServices\NameService.svc" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -466,6 +472,13 @@
     <Compile Include="MasterPages\Management.Master.designer.cs">
       <DependentUpon>Management.Master</DependentUpon>
     </Compile>
+    <Compile Include="MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NewPhotoAlbum.aspx.cs">
       <DependentUpon>NewPhotoAlbum.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -508,6 +521,13 @@
     </Compile>
     <Compile Include="Reviews\ViewDetails.aspx.designer.cs">
       <DependentUpon>ViewDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebServices\NameService.svc.cs">
       <DependentUpon>NameService.svc</DependentUpon>
