@@ -22,6 +22,7 @@ namespace PlanetWrox.Demos
                 double value1 = Convert.ToDouble(ValueBox1.Text);
                 double value2 = Convert.ToDouble(ValueBox2.Text);
                 Calculator myCalculator = new Calculator();
+                Trace.Write(string.Format("Performing the calculation with the {0} operator", OperatorList.SelectedValue));
                 switch (OperatorList.SelectedValue)
                 {
                     case "+":
@@ -42,6 +43,7 @@ namespace PlanetWrox.Demos
             else
             {
                 ResultLabel.Text = string.Empty;
+                Trace.Warn("Custom Category", "TextBox controls are empty; time to add Validation controls?");
             }
         }
     }

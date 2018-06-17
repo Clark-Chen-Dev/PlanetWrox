@@ -122,6 +122,7 @@
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\Email.aspx" />
     <Content Include="Demos\Events.aspx" />
+    <Content Include="Demos\ExceptionHandling.aspx" />
     <Content Include="Demos\jQuery.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
@@ -130,6 +131,8 @@
     <Content Include="Demos\Target.aspx" />
     <Content Include="Demos\UpdatePanel.aspx" />
     <Content Include="Demos\WebServices.aspx" />
+    <Content Include="Errors\Error404.aspx" />
+    <Content Include="Errors\OtherErrors.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\Banner120x240.gif" />
     <Content Include="Images\Banner486x60.gif" />
@@ -336,6 +339,13 @@
     <Compile Include="Demos\Events.aspx.designer.cs">
       <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\ExceptionHandling.aspx.cs">
+      <DependentUpon>ExceptionHandling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\ExceptionHandling.aspx.designer.cs">
+      <DependentUpon>ExceptionHandling.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\jQuery.aspx.cs">
       <DependentUpon>jQuery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,6 +408,20 @@
     </Compile>
     <Compile Include="Demos\WebServices.aspx.designer.cs">
       <DependentUpon>WebServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\OtherErrors.aspx.cs">
+      <DependentUpon>OtherErrors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\OtherErrors.aspx.designer.cs">
+      <DependentUpon>OtherErrors.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

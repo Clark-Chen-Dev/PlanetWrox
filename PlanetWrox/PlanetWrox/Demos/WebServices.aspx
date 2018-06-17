@@ -11,7 +11,7 @@
     <input id="YourName" type="text"  />
     <input id="SayHello" type="button" value="Say Hello" onclick="helloWorld();"/>
     <script>
-        function helloWorld() {
+      function helloWorld() {
             var yourName = document.getElementById('YourName').value;
             NameService.HelloWorld(yourName, helloWorldCallback);
         }

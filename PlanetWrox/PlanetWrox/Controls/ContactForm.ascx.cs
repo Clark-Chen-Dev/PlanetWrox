@@ -29,21 +29,32 @@ namespace PlanetWrox.Controls
                 mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text);
                 mailBody = mailBody.Replace("##Comments##", Comments.Text);
 
-                MailMessage myMessage = new MailMessage();
-                myMessage.Subject = "Response from web site";
-                myMessage.Body = mailBody;
+                try
+                {
+                    MailMessage myMessage = new MailMessage();
+                    myMessage.Subject = "Response from web site";
+                    myMessage.Body = mailBody;
 
-                myMessage.From = new MailAddress("you@example.com", "Sender Name");
-                myMessage.To.Add(new MailAddress("you@example.com", "Receiver Name"));
-                myMessage.ReplyToList.Add(new MailAddress(EmailAddress.Text));
+                    myMessage.From = new MailAddress("you@example.com", "Sender Name");
+                    myMessage.To.Add(new MailAddress("you@example.com", "Receiver Name"));
+                    myMessage.ReplyToList.Add(new MailAddress(EmailAddress.Text));
 
-                SmtpClient mySmtpClient = new SmtpClient();
-                mySmtpClient.Send(myMessage);
+                    SmtpClient mySmtpClient = new SmtpClient();
+                    mySmtpClient.Send(myMessage);
 
-                Message.Visible = true;
-                MessageSentPara.Visible = true;
-                FormTable.Visible = false;
-                System.Threading.Thread.Sleep(5000);
+                    Message.Visible = true;
+                    MessageSentPara.Visible = true;
+                    FormTable.Visible = false;
+                    System.Threading.Thread.Sleep(5000);
+                } // end try
+                catch (SmtpException)
+                {
+                    Message.Text = "An error occurred while sending your e-mail. Please try again.";
+                } // end catch
+                finally
+                {
+                    Message.Visible = true;
+                }
             } // end if
         }
 

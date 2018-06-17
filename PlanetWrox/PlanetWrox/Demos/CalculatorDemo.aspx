@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CalculatorDemo.aspx.cs" Inherits="PlanetWrox.Demos.CalculatorDemo" %>
+﻿<%@ Page Title="Calculator Demo" Language="C#" AutoEventWireup="true" CodeBehind="CalculatorDemo.aspx.cs" Inherits="PlanetWrox.Demos.CalculatorDemo"
+  Trace="false"%>
 
 <!DOCTYPE html>
 
