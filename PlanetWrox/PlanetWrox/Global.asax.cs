@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlanetWrox.Code;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -7,6 +8,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
+using System.Web.Optimization;
 
 namespace PlanetWrox
 {
@@ -18,10 +20,11 @@ namespace PlanetWrox
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
             new ScriptResourceDefinition
-              {
-                  Path = "~/Scripts/jquery-3.3.1.min.js"
-              }
+            {
+                Path = "~/Scripts/jquery-3.3.1.min.js"
+            }
             );
+            BundleTable.Bundles.Add(new StyleBundle("~/StyleSheets").IncludeDirectory("~/Styles", "*.css"));
         }
 
         protected void Session_Start(object sender, EventArgs e)
@@ -42,21 +45,25 @@ namespace PlanetWrox
         protected void Application_Error(object sender, EventArgs e)
         {
             // Code that runs when an unhandled error occurs
-            if (HttpContext.Current.Server.GetLastError() != null)
+            if (AppConfiguration.SendMailOnError)
             {
-                Exception myException = HttpContext.Current.Server.GetLastError().GetBaseException();
-                string mailSubject = "Error in page " + Request.Url.ToString();
-                string message = string.Empty;
-                message += "<strong>Message</strong><br />" + myException.Message + "<br />";
-                message += "<strong>Stack Trace</strong><br />" + myException.StackTrace + "<br />";
-                message += "<strong>Query String</strong><br />" + Request.QueryString.ToString() + "<br />";
-                MailMessage myMessage = new MailMessage("you@example.com", "you@example.com", mailSubject, message)
+                if (HttpContext.Current.Server.GetLastError() != null)
                 {
-                    IsBodyHtml = true
-                };
-                SmtpClient mySmtpClient = new SmtpClient();
-                mySmtpClient.Send(myMessage);
-            }
+                    Exception myException = HttpContext.Current.Server.GetLastError().GetBaseException();
+                    string mailSubject = "Error in page " + Request.Url.ToString();
+                    string message = string.Empty;
+                    message += "<strong>Message</strong><br />" + myException.Message + "<br />";
+                    message += "<strong>Stack Trace</strong><br />" + myException.StackTrace + "<br />";
+                    message += "<strong>Query String</strong><br />" + Request.QueryString.ToString() + "<br />";
+                    MailMessage myMessage = new MailMessage(AppConfiguration.FromAddress, 
+                        AppConfiguration.ToAddress, mailSubject, message)
+                    {
+                        IsBodyHtml = true
+                    };
+                    SmtpClient mySmtpClient = new SmtpClient();
+                    mySmtpClient.Send(myMessage);
+                }
+            } // end if
         }
 
         protected void Session_End(object sender, EventArgs e)

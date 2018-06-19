@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using System.Net.Mail;
+using PlanetWrox.Code;
 
 namespace PlanetWrox.Controls
 {
@@ -35,17 +36,15 @@ namespace PlanetWrox.Controls
                     myMessage.Subject = "Response from web site";
                     myMessage.Body = mailBody;
 
-                    myMessage.From = new MailAddress("you@example.com", "Sender Name");
-                    myMessage.To.Add(new MailAddress("you@example.com", "Receiver Name"));
+                    myMessage.From = new MailAddress(AppConfiguration.FromAddress, AppConfiguration.FromName);
+                    myMessage.To.Add(new MailAddress(AppConfiguration.ToAddress, AppConfiguration.ToName));
                     myMessage.ReplyToList.Add(new MailAddress(EmailAddress.Text));
 
                     SmtpClient mySmtpClient = new SmtpClient();
                     mySmtpClient.Send(myMessage);
 
-                    Message.Visible = true;
                     MessageSentPara.Visible = true;
                     FormTable.Visible = false;
-                    System.Threading.Thread.Sleep(5000);
                 } // end try
                 catch (SmtpException)
                 {
@@ -60,7 +59,7 @@ namespace PlanetWrox.Controls
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            if (!string.IsNullOrEmpty(PhoneHome.Text) || 
+            if (!string.IsNullOrEmpty(PhoneHome.Text) ||
                 !string.IsNullOrEmpty(PhoneBusiness.Text))
             {
                 args.IsValid = true;
